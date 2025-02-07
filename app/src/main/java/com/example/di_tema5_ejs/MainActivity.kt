@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory
 import android.graphics.Picture
 import android.os.Bundle
 import android.util.Log
+import android.widget.Space
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -17,8 +18,11 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.FlowRowScopeInstance.weight
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.RowScopeInstance.weight
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -146,4 +150,21 @@ Compose exclusivamente.
 @Composable
 fun EjercicioInicial(){
 
+    LazyHorizontalGrid(
+        rows = GridCells.Fixed(5)
+    ) {
+        items(items = listOf<Space>()){
+            Spacer(modifier = Modifier)
+            Spacer(modifier = Modifier)
+            Spacer(modifier = Modifier)
+            Spacer(modifier = Modifier)
+            Spacer(modifier = Modifier)
+        }
+    }
+}
+
+@Preview
+@Composable
+fun priviuEj4(){
+    EjercicioInicial()
 }
